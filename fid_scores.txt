@@ -1,0 +1,870 @@
+FID Scores:
+  0%|          | 0/45 [00:00<?, ?it/s]  2%|▏         | 1/45 [00:02<01:28,  2.02s/it]  4%|▍         | 2/45 [00:03<01:05,  1.53s/it]  7%|▋         | 3/45 [00:04<00:57,  1.38s/it]  9%|▉         | 4/45 [00:05<00:54,  1.33s/it] 11%|█         | 5/45 [00:06<00:51,  1.29s/it] 13%|█▎        | 6/45 [00:08<00:49,  1.27s/it] 16%|█▌        | 7/45 [00:09<00:47,  1.25s/it] 18%|█▊        | 8/45 [00:10<00:46,  1.25s/it] 20%|██        | 9/45 [00:11<00:44,  1.24s/it] 22%|██▏       | 10/45 [00:13<00:43,  1.24s/it] 24%|██▍       | 11/45 [00:14<00:43,  1.27s/it] 27%|██▋       | 12/45 [00:15<00:42,  1.28s/it] 29%|██▉       | 13/45 [00:17<00:41,  1.30s/it] 31%|███       | 14/45 [00:18<00:40,  1.30s/it] 33%|███▎      | 15/45 [00:19<00:38,  1.28s/it] 36%|███▌      | 16/45 [00:20<00:37,  1.28s/it] 38%|███▊      | 17/45 [00:22<00:35,  1.26s/it] 40%|████      | 18/45 [00:23<00:33,  1.24s/it] 42%|████▏     | 19/45 [00:24<00:31,  1.22s/it] 44%|████▍     | 20/45 [00:25<00:30,  1.21s/it] 47%|████▋     | 21/45 [00:26<00:28,  1.21s/it] 49%|████▉     | 22/45 [00:27<00:27,  1.20s/it] 51%|█████     | 23/45 [00:29<00:26,  1.20s/it] 53%|█████▎    | 24/45 [00:30<00:25,  1.19s/it] 56%|█████▌    | 25/45 [00:31<00:23,  1.19s/it] 58%|█████▊    | 26/45 [00:32<00:22,  1.21s/it] 58%|█████▊    | 26/45 [00:33<00:24,  1.28s/it]
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 3, in <module>
+    pytorch_fid.fid_score.main()
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 313, in main
+    fid_value = calculate_fid_given_paths(args.path,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 259, in calculate_fid_given_paths
+    m1, s1 = compute_statistics_of_path(paths[0], model, batch_size,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 243, in compute_statistics_of_path
+    m, s = calculate_activation_statistics(files, model, batch_size,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 228, in calculate_activation_statistics
+    act = get_activations(files, model, batch_size, dims, device, num_workers)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 132, in get_activations
+    for batch in tqdm(dataloader):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/tqdm/std.py", line 1182, in __iter__
+    for obj in iterable:
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 633, in __next__
+    data = self._next_data()
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 677, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 87, in __getitem__
+    img = Image.open(path).convert('RGB')
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/PIL/Image.py", line 921, in convert
+    self.load()
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/PIL/ImageFile.py", line 260, in load
+    n, err_code = decoder.decode(b)
+KeyboardInterrupt
+
+================================================
+Calculating FID score for big-eyed-fluff-ball...
+================================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 38, in <module>
+    import numpy as np
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/__init__.py", line 141, in <module>
+    from . import core
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/core/__init__.py", line 9, in <module>
+    from numpy.version import version as __version__
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/version.py", line 3, in <module>
+    from ._version import get_versions
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/_version.py", line 7, in <module>
+    import json
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/json/__init__.py", line 106, in <module>
+    from .decoder import JSONDecoder, JSONDecodeError
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/json/decoder.py", line 5, in <module>
+    from json import scanner
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 969, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1091, in path_stats
+  File "<frozen importlib._bootstrap_external>", line 147, in _path_stat
+KeyboardInterrupt
+
+==============================================
+Calculating FID score for tiny-construction...
+==============================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 3, in <module>
+    pytorch_fid.fid_score.main()
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 313, in main
+    fid_value = calculate_fid_given_paths(args.path,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 257, in calculate_fid_given_paths
+    model = InceptionV3([block_idx]).to(device)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/inception.py", line 80, in __init__
+    inception = fid_inception_v3()
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/inception.py", line 206, in fid_inception_v3
+    inception = _inception_v3(num_classes=1008,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/inception.py", line 194, in _inception_v3
+    return torchvision.models.inception_v3(*args, **kwargs)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torchvision/models/_utils.py", line 142, in wrapper
+    return fn(*args, **kwargs)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torchvision/models/_utils.py", line 228, in inner_wrapper
+    return builder(*args, **kwargs)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torchvision/models/inception.py", line 470, in inception_v3
+    model = Inception3(**kwargs)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torchvision/models/inception.py", line 72, in __init__
+    self.Mixed_6a = inception_b(288)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torchvision/models/inception.py", line 223, in __init__
+    self.branch3x3dbl_2 = conv_block(64, 96, kernel_size=3, padding=1)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torchvision/models/inception.py", line 401, in __init__
+    self.conv = nn.Conv2d(in_channels, out_channels, bias=False, **kwargs)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 450, in __init__
+    super().__init__(
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 144, in __init__
+    self.reset_parameters()
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 150, in reset_parameters
+    init.kaiming_uniform_(self.weight, a=math.sqrt(5))
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/nn/init.py", line 412, in kaiming_uniform_
+    return tensor.uniform_(-bound, bound)
+KeyboardInterrupt
+
+==========================================
+Calculating FID score for dogs-downtown...
+==========================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 39, in <module>
+    import torch
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/__init__.py", line 1465, in <module>
+    from . import _meta_registrations
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/_meta_registrations.py", line 7, in <module>
+    from torch._decomp import _add_op_to_registry, global_decomposition_table, meta_table
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/_decomp/__init__.py", line 170, in <module>
+    import torch._refs
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/_refs/__init__.py", line 1771, in <module>
+    def clamp_max(
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/_prims_common/wrappers.py", line 208, in _out_wrapper
+    sig = inspect.signature(fn)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/inspect.py", line 3252, in signature
+    def signature(obj, *, follow_wrapped=True, globals=None, locals=None, eval_str=False):
+KeyboardInterrupt
+
+===================================================
+Calculating FID score for closeup-man-in-glasses...
+===================================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 38, in <module>
+    import numpy as np
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/__init__.py", line 141, in <module>
+    from . import core
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/core/__init__.py", line 73, in <module>
+    from . import numeric
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/core/numeric.py", line 62, in <module>
+    class ComplexWarning(RuntimeWarning):
+KeyboardInterrupt
+
+=======================================
+Calculating FID score for tokyo-walk...
+=======================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 3, in <module>
+    pytorch_fid.fid_score.main()
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 313, in main
+    fid_value = calculate_fid_given_paths(args.path,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 257, in calculate_fid_given_paths
+    model = InceptionV3([block_idx]).to(device)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1145, in to
+    return self._apply(convert)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 797, in _apply
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 797, in _apply
+    module._apply(fn)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 797, in _apply
+    module._apply(fn)
+  [Previous line repeated 1 more time]
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 820, in _apply
+    param_applied = fn(param)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1143, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+KeyboardInterrupt
+
+============================================
+Calculating FID score for flower-blooming...
+============================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 38, in <module>
+    import numpy as np
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/__init__.py", line 141, in <module>
+    from . import core
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/core/__init__.py", line 9, in <module>
+    from numpy.version import version as __version__
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/version.py", line 3, in <module>
+    from ._version import get_versions
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/_version.py", line 7, in <module>
+    import json
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/json/__init__.py", line 107, in <module>
+    from .encoder import JSONEncoder
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1012, in get_code
+  File "<frozen importlib._bootstrap_external>", line 672, in _compile_bytecode
+KeyboardInterrupt
+
+=============================================
+Calculating FID score for grandma-birthday...
+=============================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 35, in <module>
+    import pathlib
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/pathlib.py", line 4, in <module>
+    import ntpath
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/ntpath.py", line 571, in <module>
+    from nt import _getfinalpathname, readlink as _nt_readlink
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1002, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 945, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1439, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1411, in _get_spec
+  File "<frozen importlib._bootstrap_external>", line 1576, in find_spec
+KeyboardInterrupt
+
+=============================================
+Calculating FID score for robot-video-game...
+=============================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 39, in <module>
+    import torch
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/__init__.py", line 1242, in <module>
+    from torch import hub as hub
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/hub.py", line 16, in <module>
+    from urllib.request import urlopen, Request
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/urllib/request.py", line 88, in <module>
+    import http.client
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/http/client.py", line 72, in <module>
+    import email.message
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1012, in get_code
+  File "<frozen importlib._bootstrap_external>", line 672, in _compile_bytecode
+KeyboardInterrupt
+
+=============================================
+Calculating FID score for man-on-the-cloud...
+=============================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 39, in <module>
+    import torch
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/__init__.py", line 229, in <module>
+    from torch._C import *  # noqa: F403
+KeyboardInterrupt
+
+=======================================
+Calculating FID score for art-museum...
+=======================================
+
+=============================================
+Calculating FID score for birds-over-river...
+=============================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 38, in <module>
+    import numpy as np
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/__init__.py", line 141, in <module>
+    from . import core
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/core/__init__.py", line 23, in <module>
+    from . import multiarray
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/core/multiarray.py", line 10, in <module>
+    from . import overrides
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/core/overrides.py", line 6, in <module>
+    from numpy.core._multiarray_umath import (
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1002, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 945, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1439, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1411, in _get_spec
+  File "<frozen importlib._bootstrap_external>", line 1577, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 161, in _path_isfile
+  File "<frozen importlib._bootstrap_external>", line 153, in _path_is_mode_type
+  File "<frozen importlib._bootstrap_external>", line 147, in _path_stat
+KeyboardInterrupt
+
+============================================
+Calculating FID score for ships-in-coffee...
+============================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 35, in <module>
+    import pathlib
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/pathlib.py", line 1, in <module>
+    import fnmatch
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/fnmatch.py", line 14, in <module>
+    import re
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/re.py", line 125, in <module>
+    import sre_compile
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/sre_compile.py", line 14, in <module>
+    import sre_parse
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/sre_parse.py", line 15, in <module>
+    from sre_constants import *
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1012, in get_code
+  File "<frozen importlib._bootstrap_external>", line 672, in _compile_bytecode
+KeyboardInterrupt
+
+======================================
+Calculating FID score for santorini...
+======================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 38, in <module>
+    import numpy as np
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/__init__.py", line 141, in <module>
+    from . import core
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/core/__init__.py", line 9, in <module>
+    from numpy.version import version as __version__
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/version.py", line 3, in <module>
+    from ._version import get_versions
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/_version.py", line 7, in <module>
+    import json
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/json/__init__.py", line 106, in <module>
+    from .decoder import JSONDecoder, JSONDecodeError
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/json/decoder.py", line 5, in <module>
+    from json import scanner
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1002, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 945, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1439, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1411, in _get_spec
+  File "<frozen importlib._bootstrap_external>", line 1578, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1533, in _get_spec
+  File "<frozen importlib._bootstrap_external>", line 758, in spec_from_file_location
+  File "<frozen importlib._bootstrap>", line 357, in __init__
+KeyboardInterrupt
+
+============================================
+Calculating FID score for suv-in-the-dust...
+============================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 35, in <module>
+    import pathlib
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/pathlib.py", line 14, in <module>
+    from urllib.parse import quote_from_bytes as urlquote_from_bytes
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/urllib/parse.py", line 328, in <module>
+    class DefragResult(_DefragResultBase, _ResultMixinStr):
+KeyboardInterrupt
+
+====================================
+Calculating FID score for big-sur...
+====================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 35, in <module>
+    import pathlib
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/pathlib.py", line 1, in <module>
+    import fnmatch
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/fnmatch.py", line 14, in <module>
+    import re
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/re.py", line 124, in <module>
+    import enum
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/enum.py", line 807, in <module>
+    class IntEnum(int, Enum):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/enum.py", line 215, in __new__
+    enum_class = super().__new__(metacls, cls, bases, classdict, **kwds)
+KeyboardInterrupt
+
+========================================================
+Calculating FID score for monster-with-melting-candle...
+========================================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 36, in <module>
+    from argparse import ArgumentDefaultsHelpFormatter, ArgumentParser
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/argparse.py", line 92, in <module>
+    from gettext import gettext as _, ngettext
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/gettext.py", line 73, in <module>
+    _token_pattern = re.compile(r"""
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/re.py", line 251, in compile
+    return _compile(pattern, flags)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/sre_parse.py", line 508, in _parse
+    if this is None:
+KeyboardInterrupt
+
+======================================
+Calculating FID score for gold-rush...
+======================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 39, in <module>
+    import torch
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/__init__.py", line 229, in <module>
+    from torch._C import *  # noqa: F403
+KeyboardInterrupt
+
+========================================
+Calculating FID score for italian-pup...
+========================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 39, in <module>
+    import torch
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/__init__.py", line 229, in <module>
+    from torch._C import *  # noqa: F403
+KeyboardInterrupt
+
+====================================================
+Calculating FID score for chinese-new-year-dragon...
+====================================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 38, in <module>
+    import numpy as np
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/__init__.py", line 141, in <module>
+    from . import core
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/core/__init__.py", line 73, in <module>
+    from . import numeric
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/core/numeric.py", line 2548, in <module>
+    from . import arrayprint
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1012, in get_code
+  File "<frozen importlib._bootstrap_external>", line 672, in _compile_bytecode
+KeyboardInterrupt
+
+=========================================
+Calculating FID score for aquarium-nyc...
+=========================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 39, in <module>
+    import torch
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/__init__.py", line 229, in <module>
+    from torch._C import *  # noqa: F403
+KeyboardInterrupt
+
+============================================
+Calculating FID score for backward-jogger...
+============================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 39, in <module>
+    import torch
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/__init__.py", line 23, in <module>
+    from ._utils_internal import get_file_path, prepare_multiprocessing_environment, \
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/_utils_internal.py", line 3, in <module>
+    import tempfile
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1012, in get_code
+  File "<frozen importlib._bootstrap_external>", line 672, in _compile_bytecode
+KeyboardInterrupt
+
+==================================
+Calculating FID score for lagos...
+==================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 39, in <module>
+    import torch
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/__init__.py", line 229, in <module>
+    from torch._C import *  # noqa: F403
+KeyboardInterrupt
+
+=========================================
+Calculating FID score for amalfi-coast...
+=========================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 38, in <module>
+    import numpy as np
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/__init__.py", line 141, in <module>
+    from . import core
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/core/__init__.py", line 73, in <module>
+    from . import numeric
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/core/numeric.py", line 24, in <module>
+    from . import shape_base
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/core/shape_base.py", line 12, in <module>
+    from . import fromnumeric as _from_nx
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/core/fromnumeric.py", line 14, in <module>
+    from . import _methods
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/core/_methods.py", line 13, in <module>
+    from numpy.core import _exceptions
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1012, in get_code
+  File "<frozen importlib._bootstrap_external>", line 672, in _compile_bytecode
+KeyboardInterrupt
+
+===============================================
+Calculating FID score for otter-on-surfboard...
+===============================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 38, in <module>
+    import numpy as np
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/__init__.py", line 151, in <module>
+    from . import polynomial
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/polynomial/__init__.py", line 120, in <module>
+    from .hermite_e import HermiteE
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 975, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_data
+KeyboardInterrupt
+
+=============================================
+Calculating FID score for mitten-astronaut...
+=============================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 39, in <module>
+    import torch
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/__init__.py", line 229, in <module>
+    from torch._C import *  # noqa: F403
+KeyboardInterrupt
+
+======================================
+Calculating FID score for happy-cat...
+======================================
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 216, in _lock_unlock_module
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 38, in <module>
+    import numpy as np
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/__init__.py", line 150, in <module>
+    from . import fft
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/fft/__init__.py", line 203, in <module>
+    from . import _pocketfft, helper
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/fft/_pocketfft.py", line 36, in <module>
+    from . import _pocketfft_internal as pfi
+ImportError: numpy.core.multiarray failed to import
+
+=========================================
+Calculating FID score for stack-of-tvs...
+=========================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 39, in <module>
+    import torch
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/__init__.py", line 229, in <module>
+    from torch._C import *  # noqa: F403
+KeyboardInterrupt
+
+=============================================
+Calculating FID score for origami-undersea...
+=============================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 38, in <module>
+    import numpy as np
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/__init__.py", line 152, in <module>
+    from . import random
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/random/__init__.py", line 180, in <module>
+    from . import _pickle
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/random/_pickle.py", line 1, in <module>
+    from .mtrand import RandomState
+  File "mtrand.pyx", line 1, in init numpy.random.mtrand
+  File "bit_generator.pyx", line 38, in init numpy.random.bit_generator
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/secrets.py", line 19, in <module>
+    from random import SystemRandom
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/random.py", line 62, in <module>
+    from _sha512 import sha512 as _sha512
+KeyboardInterrupt
+
+=================================================
+Calculating FID score for basketball-explosion...
+=================================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 39, in <module>
+    import torch
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/__init__.py", line 229, in <module>
+    from torch._C import *  # noqa: F403
+KeyboardInterrupt
+
+==========================================
+Calculating FID score for puppy-cloning...
+==========================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 38, in <module>
+    import numpy as np
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/__init__.py", line 151, in <module>
+    from . import polynomial
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/polynomial/__init__.py", line 121, in <module>
+    from .laguerre import Laguerre
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1002, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 945, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1439, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1410, in _get_spec
+KeyboardInterrupt
+
+======================================
+Calculating FID score for snow-dogs...
+======================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 39, in <module>
+    import torch
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/__init__.py", line 229, in <module>
+    from torch._C import *  # noqa: F403
+KeyboardInterrupt
+
+==============================================
+Calculating FID score for chair-archaeology...
+==============================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 39, in <module>
+    import torch
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/__init__.py", line 229, in <module>
+    from torch._C import *  # noqa: F403
+KeyboardInterrupt
+
+====================================================
+Calculating FID score for victoria-crowned-pigeon...
+====================================================
+Could not import runpy module
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 15, in <module>
+    import importlib.util
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/importlib/util.py", line 5, in <module>
+    from ._bootstrap import spec_from_loader
+  File "<frozen importlib._bootstrap>", line 404, in parent
+KeyboardInterrupt
+
+=======================================
+Calculating FID score for cat-on-bed...
+=======================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 39, in <module>
+    import torch
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/__init__.py", line 229, in <module>
+    from torch._C import *  # noqa: F403
+KeyboardInterrupt
+
+======================================
+Calculating FID score for chameleon...
+======================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 39, in <module>
+    import torch
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/torch/__init__.py", line 229, in <module>
+    from torch._C import *  # noqa: F403
+KeyboardInterrupt
+
+==============================================
+Calculating FID score for tokyo-in-the-snow...
+==============================================
+Fatal Python error: init_import_site: Failed to import the site module
+Python runtime state: initialized
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site.py", line 73, in <module>
+    import os
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/os.py", line 29, in <module>
+    from _collections_abc import _check_methods
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1012, in get_code
+  File "<frozen importlib._bootstrap_external>", line 672, in _compile_bytecode
+KeyboardInterrupt
+
+=============================================
+Calculating FID score for octopus-and-crab...
+=============================================
+Traceback (most recent call last):
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/__main__.py", line 1, in <module>
+    import pytorch_fid.fid_score
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/pytorch_fid/fid_score.py", line 38, in <module>
+    import numpy as np
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/__init__.py", line 141, in <module>
+    from . import core
+  File "/lfs/mercury1/0/willyc/miniconda/envs/my_env/lib/python3.10/site-packages/numpy/core/__init__.py", line 23, in <module>
+    from . import multiarray
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1012, in get_code
+  File "<frozen importlib._bootstrap_external>", line 672, in _compile_bytecode
+KeyboardInterrupt
+
+=========================================
+Calculating FID score for train-window...
+=========================================
+FID Scores:
+  0%|          | 0/45 [00:00<?, ?it/s]  2%|▏         | 1/45 [00:02<01:32,  2.11s/it]  4%|▍         | 2/45 [00:03<01:06,  1.55s/it]  7%|▋         | 3/45 [00:04<00:57,  1.37s/it]  9%|▉         | 4/45 [00:05<00:52,  1.28s/it] 11%|█         | 5/45 [00:06<00:49,  1.24s/it] 13%|█▎        | 6/45 [00:07<00:47,  1.21s/it] 16%|█▌        | 7/45 [00:09<00:45,  1.21s/it] 18%|█▊        | 8/45 [00:10<00:44,  1.19s/it] 20%|██        | 9/45 [00:11<00:42,  1.19s/it] 22%|██▏       | 10/45 [00:12<00:41,  1.19s/it] 24%|██▍       | 11/45 [00:13<00:40,  1.18s/it] 27%|██▋       | 12/45 [00:14<00:38,  1.17s/it] 29%|██▉       | 13/45 [00:16<00:37,  1.17s/it] 31%|███       | 14/45 [00:17<00:36,  1.19s/it] 33%|███▎      | 15/45 [00:18<00:35,  1.18s/it] 36%|███▌      | 16/45 [00:19<00:33,  1.17s/it] 38%|███▊      | 17/45 [00:20<00:32,  1.17s/it] 40%|████      | 18/45 [00:21<00:31,  1.16s/it] 42%|████▏     | 19/45 [00:23<00:30,  1.16s/it] 44%|████▍     | 20/45 [00:24<00:28,  1.16s/it] 47%|████▋     | 21/45 [00:25<00:27,  1.16s/it] 49%|████▉     | 22/45 [00:26<00:26,  1.16s/it] 51%|█████     | 23/45 [00:27<00:25,  1.16s/it] 53%|█████▎    | 24/45 [00:28<00:24,  1.16s/it] 56%|█████▌    | 25/45 [00:30<00:23,  1.15s/it] 58%|█████▊    | 26/45 [00:31<00:21,  1.15s/it] 60%|██████    | 27/45 [00:32<00:20,  1.15s/it] 62%|██████▏   | 28/45 [00:33<00:19,  1.15s/it] 64%|██████▍   | 29/45 [00:34<00:18,  1.15s/it] 67%|██████▋   | 30/45 [00:35<00:17,  1.15s/it] 69%|██████▉   | 31/45 [00:36<00:16,  1.15s/it] 71%|███████   | 32/45 [00:38<00:15,  1.15s/it]FID Scores:
+  0%|          | 0/45 [00:00<?, ?it/s]  2%|▏         | 1/45 [00:04<03:32,  4.83s/it]  4%|▍         | 2/45 [00:05<01:36,  2.25s/it]  7%|▋         | 3/45 [00:05<00:59,  1.41s/it]  9%|▉         | 4/45 [00:06<00:41,  1.02s/it]
